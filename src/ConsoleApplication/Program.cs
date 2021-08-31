@@ -19,9 +19,27 @@ namespace ConsoleApplication
         /// </summary>
         public static void Main()
         {
-            var train = new Train();
-            train.StartEngines();
-            Console.WriteLine("Hello World!");
+            var t = new Train("1");
+            var t1 = new Train("Last Train To London");
+            var t2 = new Train("Last Train To London");
+            var t3 = new Train("Runaway Train");
+            int contador = t.getCounter();
+
+            //t.setID("1");
+            //t.setCounter(5);
+
+            while (contador < 10000000)
+            {
+                contador++;
+
+            }
+            t.setCounter(contador);
+            //Console.WriteLine("Cantidad de instancias: " + t.getCounter());
+            Console.WriteLine(t1 == t2);
+            Console.WriteLine(t2 == t3);
+            //t.StartEngines();
+            //Console.WriteLine("Hello World!");
+            //Console.WriteLine(Train.getCounter());
         }
     }
 }
